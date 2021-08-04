@@ -5,7 +5,10 @@ const GlobalContext = React.createContext();
 
 const GlobalProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [modalShow, setModalShow] = useState(false);
+  const [isModalShow, setIsModalShow] = useState({
+    showModal: false,
+    case: 1
+  });
   const [isOpen, setIsOpen] = useState(false);
   const [error, setError] = useState({ show: false, msg: '' });
   const [individualModalContent, setIndividualModalContent] = useState(
@@ -17,12 +20,22 @@ const GlobalProvider = ({ children }) => {
   };
 
   function handleLogoModalClickOpen(index){
-    setModalShow(true);
+    setIsModalShow({
+      showModal: true,
+      case: 1
+    });
     setIndividualModalContent(modalData[index]);
   };
 
+  const handleFormModalClickOpen = () => {
+    setIsModalShow({
+      showModal: true,
+      case: 2
+    })
+  }
+
   const handleModalClickClose = () => {
-    setModalShow(false);
+    setIsModalShow(false);
   };
 
   const onClickScrollDown = () => {
@@ -40,14 +53,15 @@ const GlobalProvider = ({ children }) => {
         setIsLoading,
         isOpen,
         openAndCloseNavbar,
+        handleFormModalClickOpen,
         error,
         onClickScrollDown,
         onClickScrollUp,
-        modalShow,
+        isModalShow,
         handleLogoModalClickOpen,
         handleModalClickClose,
         individualModalContent,
-        setModalShow,
+        setIsModalShow,
         setError,
       }}
     >

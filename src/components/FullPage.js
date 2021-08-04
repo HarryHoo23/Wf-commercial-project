@@ -14,12 +14,18 @@ import ImageGallary from './ImageGallary';
 import HomeVideo from '../video/Sunday-Hero-Video.mp4';
 import LogoContainer from './pages-components/LogoContainer';
 import LogoModalContent from './pages-components/LogoModalContent';
-import SundayModal from './pages-components/SundayModal';
+import GeneralModal from './pages-components/GeneralModal';
 import UnitDropdown from './pages-components/UnitDropdown';
 import SingleUnit from './pages-components/SingleUnit';
+import Form from './pages-components/Form';
 
 const Fullpage = () => {
-  const { individualModalContent, handleModalClickOpen } = useGlobalContext();
+  const {
+    individualModalContent,
+    handleLogoModalClickOpen,
+    isModalShow
+  } = useGlobalContext();
+
   const [name, setName] = useState([
     { id: 1, className: '' },
     { id: 2, className: '' },
@@ -31,6 +37,14 @@ const Fullpage = () => {
     title: 'Sunday Everyday',
     topTitle: 'Home',
   });
+
+  function renderModalContent() {
+    if (isModalShow.case === 1) {
+      return <LogoModalContent {...individualModalContent} />
+    } else if (isModalShow.case === 2) {
+      return <Form />
+    };
+  }
 
   return (
     <ReactFullpage
@@ -96,6 +110,8 @@ const Fullpage = () => {
               addtionalClass={navBarTitle.bgColorClass}
             />
 
+            <GeneralModal renderBodyComponent={renderModalContent()} />
+
             {/* First Section */}
             <SectionWrapper class={'section'} idName={'home'}>
               <div className='home-video'>
@@ -150,16 +166,13 @@ const Fullpage = () => {
                         key={index}
                         md={4}
                         role='button'
-                        onClick={() => handleModalClickOpen(index)}
+                        onClick={() => handleLogoModalClickOpen(index)}
                       >
                         <LogoContainer bgImg={svgImage} />
                       </Col>
                     );
                   })}
                 </Row>
-                <SundayModal>
-                  <LogoModalContent {...individualModalContent} />
-                </SundayModal>
               </div>
             </SectionWrapper>
 
@@ -190,7 +203,7 @@ const Fullpage = () => {
                     </Col>
                     <Col md={8}>
                       <Tab.Content>
-                        {tabContent.map((tab) => {
+                        {tabContent.map(tab => {
                           return (
                             <Tab.Pane
                               key={tab.position}
