@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158.431" height="170" viewBox="0 0 158.431 170">
+  <defs>
+    <filter id="Shape" x="0" y="0" width="158.431" height="170" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#506068" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Coffe_Locations" data-name="Coffe Locations" transform="translate(-350 -294)">
+    <g id="Coffee_Location" data-name="Coffee Location" transform="translate(324 -19)">
+      <g id="Location">
+        <g transform="matrix(1, 0, 0, 1, 26, 313)" filter="url(#Shape)">
+          <path id="Shape-2" data-name="Shape" d="M124.431,372.5c0,13.345-17.2,29.089-17.928,29.917a1.714,1.714,0,0,1-2.575,0C103.2,401.59,86,385.845,86,372.5a19.218,19.218,0,1,1,38.431,0Z" transform="translate(-26 -313)" fill="#8c968f"/>
+        </g>
+      </g>
+      <g id="Group_20" data-name="Group 20" transform="translate(95.422 341.179)">
+        <g id="Group_7" data-name="Group 7" transform="translate(1.148 25.253)">
+          <g id="Group_6" data-name="Group 6">
+            <path id="Path_4" data-name="Path 4" d="M33.481,68.5H30.574a.574.574,0,0,0,0,1.148h2.907a.574.574,0,0,0,0-1.148Z" transform="translate(-30 -68.5)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_9" data-name="Group 9" transform="translate(1.148 29.844)">
+          <g id="Group_8" data-name="Group 8">
+            <path id="Path_5" data-name="Path 5" d="M33.481,188.5H30.574a.574.574,0,0,0,0,1.148h2.907a.574.574,0,0,0,0-1.148Z" transform="translate(-30 -188.5)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_11" data-name="Group 11" transform="translate(0 27.549)">
+          <g id="Group_10" data-name="Group 10">
+            <path id="Path_6" data-name="Path 6" d="M3.481,128.5H.574a.574.574,0,0,0,0,1.148H3.481a.574.574,0,0,0,0-1.148Z" transform="translate(0 -128.5)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_13" data-name="Group 13" transform="translate(7.498 26.974)">
+          <g id="Group_12" data-name="Group 12">
+            <path id="Path_7" data-name="Path 7" d="M206.941,116.921h-3.481v-2.3a1.15,1.15,0,0,0-1.959-.811l-4.59,4.59a1.147,1.147,0,0,0,0,1.623l2.632,2.632-3.205,3.205a1.148,1.148,0,0,0,1.623,1.623l4.017-4.017a1.147,1.147,0,0,0,0-1.623l-2.632-2.632,1.82-1.82v.672a1.148,1.148,0,0,0,1.148,1.148h4.629a1.148,1.148,0,1,0,0-2.3Z" transform="translate(-196 -113.477)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_15" data-name="Group 15" transform="translate(5.776 24.393)">
+          <g id="Group_14" data-name="Group 14">
+            <path id="Path_8" data-name="Path 8" d="M155.939,46.2a1.148,1.148,0,0,0-1.448.143L151.335,49.5a1.148,1.148,0,1,0,1.623,1.623l2.491-2.491.839.6,1.121-1.121a2.282,2.282,0,0,1,.651-.447Z" transform="translate(-150.999 -46.006)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_17" data-name="Group 17" transform="translate(0.612 33.3)">
+          <g id="Group_16" data-name="Group 16">
+            <path id="Path_9" data-name="Path 9" d="M22.984,279.886a2.274,2.274,0,0,1-.587-1.036l-6.061,6.061a1.148,1.148,0,0,0,1.623,1.623L23.8,280.7Z" transform="translate(-16 -278.85)" fill="#fff"/>
+          </g>
+        </g>
+        <g id="Group_19" data-name="Group 19" transform="translate(13.933 23.587)">
+          <g id="Group_18" data-name="Group 18" transform="translate(0 0)">
+            <circle id="Ellipse_1" data-name="Ellipse 1" cx="1.583" cy="1.583" r="1.583" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

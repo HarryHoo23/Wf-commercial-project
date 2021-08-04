@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158.431" height="170" viewBox="0 0 158.431 170">
+  <defs>
+    <filter id="Shape" x="0" y="0" width="158.431" height="170" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#506068" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Coffe_Locations" data-name="Coffe Locations" transform="translate(-350 -294)">
+    <g id="Coffee_Location" data-name="Coffee Location" transform="translate(324 -19)">
+      <g id="Location">
+        <g transform="matrix(1, 0, 0, 1, 26, 313)" filter="url(#Shape)">
+          <path id="Shape-2" data-name="Shape" d="M124.431,372.5c0,13.345-17.2,29.089-17.928,29.917a1.714,1.714,0,0,1-2.575,0C103.2,401.59,86,385.845,86,372.5a19.218,19.218,0,1,1,38.431,0Z" transform="translate(-26 -313)" fill="#8c968f"/>
+        </g>
+      </g>
+      <path id="Path_1" data-name="Path 1" d="M21.955,78.3l-9.69-5.615v-.418a1.325,1.325,0,0,1,.71-1.157,2.921,2.921,0,1,0-4.309-2.57.679.679,0,1,0,1.358,0,1.563,1.563,0,0,1,1.624-1.562,1.564,1.564,0,0,1,.681,2.938,2.681,2.681,0,0,0-1.421,2.351v.418L1.217,78.3A2.44,2.44,0,0,0,2.44,82.848H20.732A2.44,2.44,0,0,0,21.955,78.3ZM20.732,81.49H2.44A1.082,1.082,0,0,1,1.9,79.472l9.688-5.614,9.688,5.614a1.082,1.082,0,0,1-.542,2.019Z" transform="translate(94.105 297.152)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

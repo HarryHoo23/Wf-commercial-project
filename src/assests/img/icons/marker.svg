@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158.431" height="170" viewBox="0 0 158.431 170">
+  <defs>
+    <filter id="Shape" x="0" y="0" width="158.431" height="170" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#506068" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Coffe_Locations" data-name="Coffe Locations" transform="translate(-350 -294)">
+    <g id="Coffee_Location" data-name="Coffee Location" transform="translate(324 -19)">
+      <g id="Location">
+        <g transform="matrix(1, 0, 0, 1, 26, 313)" filter="url(#Shape)">
+          <path id="Shape-2" data-name="Shape" d="M124.431,372.5c0,13.345-17.2,29.089-17.928,29.917a1.714,1.714,0,0,1-2.575,0C103.2,401.59,86,385.845,86,372.5a19.218,19.218,0,1,1,38.431,0Z" transform="translate(-26 -313)" fill="#8c968f"/>
+        </g>
+      </g>
+      <g id="Coffee">
+        <rect id="bound" width="20" height="20" transform="translate(95 364)" fill="rgba(0,0,0,0)"/>
+        <path id="Combined_Shape" data-name="Combined Shape" d="M102,378.167h-2.83a2.951,2.951,0,0,1,0-5.833H100v-1.667h12.5v2.917a6.253,6.253,0,0,1-10.5,4.583Zm-3.664-2.917c0,.461.374,1.25.833,1.25h1.552a6.22,6.22,0,0,1-.705-2.5h-.847C98.707,374,98.333,374.79,98.333,375.25Z" fill="#fff"/>
+        <rect id="Rectangle" width="12.5" height="1.67" rx="0.83" transform="translate(100 381.5)" fill="#fff"/>
+        <path id="Path_44_Copy_2" data-name="Path 44 Copy 2" d="M101.772,368.512a3.185,3.185,0,0,0,.342.3l.4.3.815-1.091-.4-.3a1.829,1.829,0,0,1-.2-2.756l-.965-.961A3.19,3.19,0,0,0,101.772,368.512Z" fill="#fff"/>
+        <path id="Path_44_Copy_3" data-name="Path 44 Copy 3" d="M105.939,369.345a3.2,3.2,0,0,0,.342.3l.4.3.815-1.091-.4-.3a1.829,1.829,0,0,1-.2-2.756l-.965-.961A3.19,3.19,0,0,0,105.939,369.345Z" fill="#fff"/>
+        <path id="Path_44_Copy_4" data-name="Path 44 Copy 4" d="M110.106,368.512a3.186,3.186,0,0,0,.342.3l.4.3.815-1.091-.4-.3a1.829,1.829,0,0,1-.2-2.756L110.1,364A3.19,3.19,0,0,0,110.106,368.512Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

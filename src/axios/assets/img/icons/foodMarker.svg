@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158.431" height="170" viewBox="0 0 158.431 170">
+  <defs>
+    <filter id="Shape" x="0" y="0" width="158.431" height="170" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#506068" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Coffee_Location" data-name="Coffee Location" transform="translate(-26 -313)">
+    <g id="Location">
+      <g transform="matrix(1, 0, 0, 1, 26, 313)" filter="url(#Shape)">
+        <path id="Shape-2" data-name="Shape" d="M124.431,372.5c0,13.345-17.2,29.089-17.928,29.917a1.714,1.714,0,0,1-2.575,0C103.2,401.59,86,385.845,86,372.5a19.218,19.218,0,1,1,38.431,0Z" transform="translate(-26 -313)" fill="#8c968f"/>
+      </g>
+    </g>
+    <g id="Group_5" data-name="Group 5" transform="translate(93.034 267.773)">
+      <g id="Group_2" data-name="Group 2" transform="translate(0 108.181)">
+        <g id="Group_1" data-name="Group 1">
+          <path id="Path_2" data-name="Path 2" d="M24.288,352.241a.511.511,0,0,0-.432-.241H.508a.507.507,0,0,0-.454.734,4.156,4.156,0,0,0,3.739,2.311H20.571a4.162,4.162,0,0,0,3.74-2.31A.513.513,0,0,0,24.288,352.241Z" transform="translate(0 -352)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_4" data-name="Group 4" transform="translate(2.092 96)">
+        <g id="Group_3" data-name="Group 3">
+          <path id="Path_3" data-name="Path 3" d="M55.447,98.136a1.523,1.523,0,1,0-2.783,0,10.128,10.128,0,0,0-8.7,9.031H64.144A10.131,10.131,0,0,0,55.447,98.136Zm-1.866,2.939a7.088,7.088,0,0,0-6.228,4.722.509.509,0,0,1-.479.339.516.516,0,0,1-.168-.028.509.509,0,0,1-.311-.648,8.1,8.1,0,0,1,7.119-5.4.515.515,0,0,1,.54.473A.507.507,0,0,1,53.581,101.075Z" transform="translate(-43.966 -96)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
