@@ -2,7 +2,7 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import SectionWrapper from './SectionWrapper';
 import { hrefLinks } from '../data/Menu';
-import { tabContent } from '../data/Content';
+import { tabContent, fixtures_type } from '../data/Content';
 import { useState } from 'react';
 import { Row, Col, Tab, Nav } from 'react-bootstrap';
 import { useGlobalContext } from '../contexts/GlobalContext';
@@ -14,12 +14,13 @@ import ImageGallary from './ImageGallary';
 import HomeVideo from '../video/Sunday-Hero-Video.mp4';
 import LogoContainer from './pages-components/LogoContainer';
 import LogoModalContent from './pages-components/LogoModalContent';
-import SundayModal from './pages-components/SundayModal';
+import GeneralModal from './pages-components/GeneralModal';
+import Form from './pages-components/Form';
 import SingleUnit from './pages-components/SingleUnit';
 import Siteplan from './pages-components/Siteplan';
 
 const Fullpage = () => {
-  const { individualModalContent, handleModalClickOpen } = useGlobalContext();
+  const { individualModalContent, handleLogoModalClickOpen, isModalShow } = useGlobalContext();
   const [name, setName] = useState([
     { id: 1, className: '' },
     { id: 2, className: '' },
@@ -31,6 +32,14 @@ const Fullpage = () => {
     title: 'Sunday Everyday',
     topTitle: 'Home',
   });
+
+  function renderModalContent() {
+    if (isModalShow.case === 1) {
+      return <LogoModalContent {...individualModalContent} />
+    } else if (isModalShow.case === 2) {
+      return <Form />
+    }
+  }
 
   return (
     <ReactFullpage
@@ -96,6 +105,8 @@ const Fullpage = () => {
               addtionalClass={navBarTitle.bgColorClass}
             />
 
+            <GeneralModal renderBodyComponent={renderModalContent()} />
+
             {/* First Section */}
             <SectionWrapper class={'section'} idName={'home'}>
               <div className='home-video'>
@@ -150,16 +161,13 @@ const Fullpage = () => {
                         key={index}
                         md={4}
                         role='button'
-                        onClick={() => handleModalClickOpen(index)}
+                        onClick={() => handleLogoModalClickOpen(index)}
                       >
                         <LogoContainer bgImg={svgImage} />
                       </Col>
                     );
                   })}
                 </Row>
-                <SundayModal>
-                  <LogoModalContent {...individualModalContent} />
-                </SundayModal>
               </div>
             </SectionWrapper>
 
@@ -233,10 +241,23 @@ const Fullpage = () => {
             <SectionWrapper class={'section'} idName={'fixtures-finishes'}>
               <div className='bg-wrapper'>
                 <Title
-                  colorClassName=''
+                  colorClassName='white-title'
                   firstHalfTitle='Fixtures'
                   secondHalfTitle='& finishes.'
                 />
+                <Row>
+                  {fixtures_type.map((fixture) => {
+                    return (
+                      <Col key={fixture.id} md={3} sm={6} >
+                        <div className="fixture-box">
+                          <div className="fixture-type">
+                            <p>{fixture.type}</p>
+                          </div>
+                        </div>
+                      </Col>
+                    )
+                  })}
+                </Row>
               </div>
             </SectionWrapper>
 

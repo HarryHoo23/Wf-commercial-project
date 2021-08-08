@@ -1,9 +1,9 @@
 import React from 'react';
 import { useGlobalContext } from '../../contexts/GlobalContext';
-import SundayModal from '../pages-components/SundayModal';
+import SundayModal from '../pages-components/GeneralModal';
 
 const TopNavbar = (props) => {
-  const { handleModalClickOpen, onClickScrollUp } = useGlobalContext();
+  const { handleFormModalClickOpen, onClickScrollUp } = useGlobalContext();
   return (
     <div className='nav-wrapper-top'>
       <div className={`nav-top-row ${props.addtionalClass} `}>
@@ -37,7 +37,7 @@ const TopNavbar = (props) => {
           <button
             type='button'
             className='property-contact-btn btn btn-secondary'
-            onClick={handleModalClickOpen}
+            onClick={handleFormModalClickOpen}
           >
             Enquiry
           </button>

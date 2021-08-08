@@ -763,3 +763,22 @@ export const sitePlanData = [
     },
   },
 ];
+
+export const fixtures_type = [
+  {
+    id: 1,
+    type: 'General'
+  },
+  {
+    id: 2,
+    type: 'Kitchen'
+  },
+  {
+    id: 3,
+    type: 'Fittings'
+  },
+  {
+    id: 4,
+    type: 'Bathroom'
+  }
+];

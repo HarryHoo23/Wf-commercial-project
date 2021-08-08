@@ -3,11 +3,11 @@ import { Modal } from 'react-bootstrap';
 import closeButton from '../../assests/img/icons/close.svg';
 import { useGlobalContext } from '../../contexts/GlobalContext';
 
-const SundayModal = (props) => {
-  const { modalShow, handleModalClickClose } = useGlobalContext();
+const GeneralModal = (props) => {
+  const { isModalShow, handleModalClickClose } = useGlobalContext();
   return (
     <Modal
-      show={modalShow}
+      show={isModalShow.showModal}
       onHide={handleModalClickClose}
       backdrop='static'
       aria-labelledby='contained-modal-title-vcenter'
@@ -17,12 +17,10 @@ const SundayModal = (props) => {
         <button className='close' type='button' onClick={handleModalClickClose}>
           <img src={closeButton} alt='closeModalButton' />
         </button>
-        <Modal.Body>
-          {props.children}
-        </Modal.Body>
+        <Modal.Body>{props.renderBodyComponent}</Modal.Body>
       </div>
     </Modal>
   );
 };
 
-export default SundayModal;
+export default GeneralModal;
