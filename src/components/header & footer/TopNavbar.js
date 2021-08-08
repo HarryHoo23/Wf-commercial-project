@@ -1,6 +1,5 @@
 import React from 'react';
 import { useGlobalContext } from '../../contexts/GlobalContext';
-import SundayModal from '../pages-components/GeneralModal';
 
 const TopNavbar = (props) => {
   const { handleFormModalClickOpen, onClickScrollUp } = useGlobalContext();
@@ -43,9 +42,6 @@ const TopNavbar = (props) => {
           </button>
         </div>
       </div>
-      <SundayModal>
-        <div>Your know</div>
-      </SundayModal>
     </div>
   );
 }
