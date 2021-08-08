@@ -1,49 +1,50 @@
 export const links = [
   {
     id: 1,
-    href: '#sd-home',
+    href: '#home',
     text: 'Home',
   },
   {
     id: 2,
-    href: '#sd-every',
+    href: '#every',
     text: 'Sunday, Every day',
   },
   {
     id: 3,
-    href: '#sd-partners',
+    href: '#partners',
     text: 'Creative partners',
   },
   {
     id: 4,
-    href: '#sd-welcomeHome',
+    href: '#welcomeHome',
     text: 'Welcome home',
   },
   {
     id: 5,
-    href: '#sd-floorplans',
+    href: '#siteplan',
     text: 'Residences',
   },
   {
     id: 6,
-    href: '#sd-doorsteps',
+    href: '#residencies',
     text: 'On your doorstep',
   },
   {
     id: 7,
-    href: '#sd-map',
+    href: '#map',
     text: 'Out and about',
   },
   {
     id: 8,
-    href: '#sd-contact-us',
+    href: '#contact-us',
     text: 'Contact'
   },
 ];
 
 export const hrefLinks = [
-  'fp-viewing-sd-intro',
-  'fp-viewing-sd-every',
-  'fp-viewing-sd-partners',
-  'fp-viewing-sd-welcomeHome',
+  'fp-viewing-intro',
+  'fp-viewing-every',
+  'fp-viewing-partners',
+  'fp-viewing-welcomeHome',
+  'fp-viewing-fixtures'
 ];

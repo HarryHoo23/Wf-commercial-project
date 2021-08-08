@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
-import Navbar from './header & footer/Navbar';
+import React from 'react';
 
 const SectionWrapper = (props) => {
   return (

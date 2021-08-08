@@ -15,8 +15,8 @@ import HomeVideo from '../video/Sunday-Hero-Video.mp4';
 import LogoContainer from './pages-components/LogoContainer';
 import LogoModalContent from './pages-components/LogoModalContent';
 import SundayModal from './pages-components/SundayModal';
-import UnitDropdown from './pages-components/UnitDropdown';
 import SingleUnit from './pages-components/SingleUnit';
+import Siteplan from './pages-components/Siteplan';
 
 const Fullpage = () => {
   const { individualModalContent, handleModalClickOpen } = useGlobalContext();
@@ -39,19 +39,19 @@ const Fullpage = () => {
       // sectionsColor={['orange', 'purple', 'green']}
       navigation={false}
       anchors={[
-        'sd-home',
-        'sd-intro',
-        'sd-every',
-        'sd-partners',
-        'sd-welcomeHome',
-        'sd-floorplans',
-        'sd-fixtures',
-        'sd-doorstep',
-        'sd-video',
-        'sd-map',
-        'sd-contact-us',
-        'sd-disclaimer',
-        'sd-backpage',
+        'home',
+        'intro',
+        'every',
+        'partners',
+        'welcomeHome',
+        'siteplan',
+        'units',
+        'fixtures',
+        'video',
+        'map',
+        'contact-us',
+        'disclaimer',
+        'backpage',
       ]}
       autoScrolling={true}
       scrollBar={true}
@@ -76,9 +76,9 @@ const Fullpage = () => {
             topTitle: 'Sunday you know',
           });
         }
-        if (document.body.classList.contains(hrefLinks[2])) {
+        if (document.body.classList.contains(hrefLinks[4])) {
           setNavBarTitle({
-            bgColorClass: '',
+            bgColorClass: 'opacity-deep',
             title: 'Creative Partners',
             topTitle: 'Sunday you know',
           });
@@ -209,30 +209,37 @@ const Fullpage = () => {
 
             <SectionWrapper class={'section'} idName={'floor-plans'}>
               <div className='bg-wrapper'>
-                <Row>
-                  <Title
-                    colorClassName='white-title'
-                    firstHalfTitle='Residences'
-                    secondHalfTitle=''
-                  />
-                  <UnitDropdown />
-                </Row>
+                <Title
+                  colorClassName='white-title'
+                  firstHalfTitle='The Siteplan.'
+                  secondHalfTitle=''
+                />
+                <Siteplan />
               </div>
             </SectionWrapper>
 
             <SectionWrapper class={'section'} idName={'unit-sitemap'}>
               <div className='bg-wrapper'>
-                <Row>
-                  <Title
-                    colorClassName='white-title'
-                    firstHalfTitle='Residences'
-                    secondHalfTitle=''
-                  />
-                  <UnitDropdown />
-                </Row>
+                <Title
+                  colorClassName='white-title'
+                  firstHalfTitle='Units'
+                  secondHalfTitle=''
+                />
+                {/* <UnitDropdown /> */}
                 <SingleUnit />
               </div>
             </SectionWrapper>
+
+            <SectionWrapper class={'section'} idName={'fixtures-finishes'}>
+              <div className='bg-wrapper'>
+                <Title
+                  colorClassName=''
+                  firstHalfTitle='Fixtures'
+                  secondHalfTitle='& finishes.'
+                />
+              </div>
+            </SectionWrapper>
+
           </ReactFullpage.Wrapper>
         );
       }}
