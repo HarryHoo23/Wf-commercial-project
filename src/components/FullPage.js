@@ -2,7 +2,7 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import SectionWrapper from './SectionWrapper';
 import { hrefLinks } from '../data/Menu';
-import { tabContent } from '../data/Content';
+import { tabContent, fixtures_type } from '../data/Content';
 import { useState } from 'react';
 import { Row, Col, Tab, Nav } from 'react-bootstrap';
 import { useGlobalContext } from '../contexts/GlobalContext';
@@ -15,17 +15,12 @@ import HomeVideo from '../video/Sunday-Hero-Video.mp4';
 import LogoContainer from './pages-components/LogoContainer';
 import LogoModalContent from './pages-components/LogoModalContent';
 import GeneralModal from './pages-components/GeneralModal';
-import UnitDropdown from './pages-components/UnitDropdown';
-import SingleUnit from './pages-components/SingleUnit';
 import Form from './pages-components/Form';
+import SingleUnit from './pages-components/SingleUnit';
+import Siteplan from './pages-components/Siteplan';
 
 const Fullpage = () => {
-  const {
-    individualModalContent,
-    handleLogoModalClickOpen,
-    isModalShow
-  } = useGlobalContext();
-
+  const { individualModalContent, handleLogoModalClickOpen, isModalShow } = useGlobalContext();
   const [name, setName] = useState([
     { id: 1, className: '' },
     { id: 2, className: '' },
@@ -43,7 +38,7 @@ const Fullpage = () => {
       return <LogoModalContent {...individualModalContent} />
     } else if (isModalShow.case === 2) {
       return <Form />
-    };
+    }
   }
 
   return (
@@ -53,19 +48,19 @@ const Fullpage = () => {
       // sectionsColor={['orange', 'purple', 'green']}
       navigation={false}
       anchors={[
-        'sd-home',
-        'sd-intro',
-        'sd-every',
-        'sd-partners',
-        'sd-welcomeHome',
-        'sd-floorplans',
-        'sd-fixtures',
-        'sd-doorstep',
-        'sd-video',
-        'sd-map',
-        'sd-contact-us',
-        'sd-disclaimer',
-        'sd-backpage',
+        'home',
+        'intro',
+        'every',
+        'partners',
+        'welcomeHome',
+        'siteplan',
+        'units',
+        'fixtures',
+        'video',
+        'map',
+        'contact-us',
+        'disclaimer',
+        'backpage',
       ]}
       autoScrolling={true}
       scrollBar={true}
@@ -90,9 +85,9 @@ const Fullpage = () => {
             topTitle: 'Sunday you know',
           });
         }
-        if (document.body.classList.contains(hrefLinks[2])) {
+        if (document.body.classList.contains(hrefLinks[4])) {
           setNavBarTitle({
-            bgColorClass: '',
+            bgColorClass: 'opacity-deep',
             title: 'Creative Partners',
             topTitle: 'Sunday you know',
           });
@@ -203,7 +198,7 @@ const Fullpage = () => {
                     </Col>
                     <Col md={8}>
                       <Tab.Content>
-                        {tabContent.map(tab => {
+                        {tabContent.map((tab) => {
                           return (
                             <Tab.Pane
                               key={tab.position}
@@ -222,30 +217,50 @@ const Fullpage = () => {
 
             <SectionWrapper class={'section'} idName={'floor-plans'}>
               <div className='bg-wrapper'>
-                <Row>
-                  <Title
-                    colorClassName='white-title'
-                    firstHalfTitle='Residences'
-                    secondHalfTitle=''
-                  />
-                  <UnitDropdown />
-                </Row>
+                <Title
+                  colorClassName='white-title'
+                  firstHalfTitle='The Siteplan.'
+                  secondHalfTitle=''
+                />
+                <Siteplan />
               </div>
             </SectionWrapper>
 
             <SectionWrapper class={'section'} idName={'unit-sitemap'}>
               <div className='bg-wrapper'>
-                <Row>
-                  <Title
-                    colorClassName='white-title'
-                    firstHalfTitle='Residences'
-                    secondHalfTitle=''
-                  />
-                  <UnitDropdown />
-                </Row>
+                <Title
+                  colorClassName='white-title'
+                  firstHalfTitle='Units'
+                  secondHalfTitle=''
+                />
+                {/* <UnitDropdown /> */}
                 <SingleUnit />
               </div>
             </SectionWrapper>
+
+            <SectionWrapper class={'section'} idName={'fixtures-finishes'}>
+              <div className='bg-wrapper'>
+                <Title
+                  colorClassName='white-title'
+                  firstHalfTitle='Fixtures'
+                  secondHalfTitle='& finishes.'
+                />
+                <Row>
+                  {fixtures_type.map((fixture) => {
+                    return (
+                      <Col key={fixture.id} md={3} sm={6} >
+                        <div className="fixture-box">
+                          <div className="fixture-type">
+                            <p>{fixture.type}</p>
+                          </div>
+                        </div>
+                      </Col>
+                    )
+                  })}
+                </Row>
+              </div>
+            </SectionWrapper>
+
           </ReactFullpage.Wrapper>
         );
       }}

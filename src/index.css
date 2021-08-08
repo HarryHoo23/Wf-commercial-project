@@ -33,6 +33,14 @@ p {
     color: var(--font-primary-color);
 }
 
+.btn {
+    background-color: var(--font-primary-color);
+    padding: 0.375rem 2rem;
+    border-radius: 0px;
+    border-color: var(--font-primary-color);
+    color: #ffffff;
+}
+
 /* General */
 .bg-wrapper {
     height: 100vh;
@@ -42,12 +50,17 @@ p {
     position: relative;
 }
 
+#floor-plans .bg-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 #sunday-welcome-home .bg-wrapper {
     padding: 5rem 0 5rem 5rem;
 }
 
 .sunday-title {
-    margin-top: var(--margin-top-m);
+    padding-top: var(--margin-top-m);
     margin-bottom: 2rem;
 }
 
@@ -811,7 +824,7 @@ a.logo-link {
 #sd-everyday-carousel .swiper-pagination-bullet-active {
     background-color: #fff;
 } */
-
+/* 
 .fp-viewing-sd-every .ekko-lightbox .ekko-lightbox-container,
 .fp-viewing-sd-floorplans .ekko-lightbox-container {
     height: 100% !important;
@@ -840,7 +853,7 @@ a.logo-link {
 .fp-viewing-sd-every .modal-title,
 .fp-viewing-sd-floorplans .modal-title {
     visibility: hidden;
-}
+} */
 
 .carousel-inner {
     overflow: visible;
@@ -1354,12 +1367,6 @@ a.logo-link {
 
 
 /* Fixtures Section */
-#fixtures {
-    /* background: linear-gradient(rgba(228, 224, 217, 0.5), rgba(228, 224, 217, 0.5)), url("../assets/img/bg\ –\ Fixtures.png"); */
-    height: 100vh !important;
-    z-index: 2;
-}
-
 .fixtures-row {
     height: 100%;
 }
@@ -1864,10 +1871,6 @@ button.btn.btn-link[aria-expanded='true'] {
     padding: 5rem;
 }
 
-#contact-us .sunday-title p::before {
-    background-color: #88918B;
-}
-
 .contact-container {
     height: 100%;
     padding-top: 60px;
@@ -2250,18 +2253,6 @@ ul.sale-contact li a {
     background-color: var(--font-primary-color);
     display: none;
     flex-direction: column;
-}
-
-#replaced-content .sunday-title {
-    margin-top: 0rem;
-}
-
-#replaced-content .sunday-title p {
-    color: #fff;
-}
-
-#replaced-content .sunday-title p::before {
-    background-color: rgba(255, 255, 255, 1);
 }
 
 #replaced-content .row {
@@ -2677,6 +2668,17 @@ textarea.form-control:focus {
 }
 
 
+/* Siteplan */
+.siteplan-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.siteplan_Info {
+    margin-top: 3rem;
+}
 
 /* Unit Page */
 .unit-wrapper {
@@ -2724,15 +2726,14 @@ textarea.form-control:focus {
 }
 
 #floor-plans .row,
-#unit-sitemap .row {
+#unit-sitemap .row,
+#fixtures-finishes .row {
     position: relative;
+    flex-grow: 1;
 }
 
 .dropdown {
-    text-align: right;
     margin-top: var(--margin-top-m);
-    position: absolute;
-    right: 0;
 }
 
 #dropdown-basic-button {
@@ -2760,4 +2761,50 @@ textarea.form-control:focus {
     width: 100%;
     border-radius: 0px;
     border-width: 0px;
+}
+
+#fixtures-finishes .row {
+    position: absolute;
+    top: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+    right: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.fixture-box {
+    border: 1px solid #ffffff;
+    height: 25vh;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.fixture-box:hover {
+    background-color: #fff;
+}
+
+.fixture-type {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--background-color-grey);
+    margin: 0 10px;
+    height: 20%;
+}
+
+.fixture-type p {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.fixture-box:hover .fixture-type {
+    border-top: 1px solid #ffffff;
+}
+
+.fixture-box:hover .fixture-type p {
+    color: #2d2d2d;
 }

@@ -30,12 +30,12 @@ const GlobalProvider = ({ children }) => {
   const handleFormModalClickOpen = () => {
     setIsModalShow({
       showModal: true,
-      case: 2
-    })
+      case: 2,
+    });
   }
 
   const handleModalClickClose = () => {
-    setIsModalShow(false);
+   setIsModalShow(false)
   };
 
   const onClickScrollDown = () => {
@@ -53,12 +53,12 @@ const GlobalProvider = ({ children }) => {
         setIsLoading,
         isOpen,
         openAndCloseNavbar,
-        handleFormModalClickOpen,
         error,
         onClickScrollDown,
         onClickScrollUp,
         isModalShow,
         handleLogoModalClickOpen,
+        handleFormModalClickOpen,
         handleModalClickClose,
         individualModalContent,
         setIsModalShow,

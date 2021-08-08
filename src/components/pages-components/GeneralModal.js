@@ -5,8 +5,6 @@ import { useGlobalContext } from '../../contexts/GlobalContext';
 
 const GeneralModal = (props) => {
   const { isModalShow, handleModalClickClose } = useGlobalContext();
-  console.log(props);
-  
   return (
     <Modal
       show={isModalShow.showModal}
@@ -19,9 +17,7 @@ const GeneralModal = (props) => {
         <button className='close' type='button' onClick={handleModalClickClose}>
           <img src={closeButton} alt='closeModalButton' />
         </button>
-        <Modal.Body>
-          {props.renderBodyComponent}
-        </Modal.Body>
+        <Modal.Body>{props.renderBodyComponent}</Modal.Body>
       </div>
     </Modal>
   );

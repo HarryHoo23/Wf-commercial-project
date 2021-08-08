@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 const Form = () => {
   return (
     <div>
-      This is a form page.
+      this is a form page.
     </div>
   )
 }
 
-export default Form;
+export default Form
+
