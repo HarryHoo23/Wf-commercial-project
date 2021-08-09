@@ -11,6 +11,7 @@ Variables
     --animate-delay: 0.5s;
     --font-size: 16px;
     --lg-font-size: 20px;
+    --xl-font-size: 28px;
     --font-weight: 400;
     --transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
     --margin-top-m: 3rem;
@@ -65,7 +66,7 @@ p {
 }
 
 .sunday-title h3 {
-    font-size: 28px;
+    font-size: var(--xl-font-size);
     line-height: 40px;
     color: var(--font-primary-color);
     position: relative;
@@ -167,46 +168,6 @@ p {
 #nav-open-btn {
     margin-right: 0;
 }
-
-
-/* Progress scroll bar css */
-/* #fp-nav ul li:hover a span,
-#fp-nav ul li a.active span,
-#fp-nav ul li:hover a.active span {
-    width: 2px;
-    height: 20px;
-    margin: 0px -1px -1px -1px;
-    border-radius: 0;
-}
-
-#fp-nav ul li {
-    width: 2px;
-    height: 10px;
-    margin: 0;
-}
-
-#fp-nav ul li a.active span {
-    height: 20px;
-    width: 2px;
-    border-radius: 0;
-    background-color: var(--background-color-grey);
-    z-index: 100;
-}
-
-#fp-nav ul li a span {
-    height: 20px;
-    width: 1px;
-    background: var(--background-color-grey);
-    opacity: 1;
-    border-radius: 0;
-    margin: 0;
-}
-
-#fp-nav.fp-right {
-    right: 2.5rem;
-} */
-
-
 
 /* Header */
 .sunday-navbar {
@@ -614,7 +575,7 @@ ul.nav li:last-child .nav-link {
 .home-modal-content p {
     color: #fff;
     font-size: 16px;
-    line-height: 28px;
+    line-height: var(--xl-font-size);
     font-weight: 300;
     letter-spacing: 0.01em;
 }
@@ -622,7 +583,7 @@ ul.nav li:last-child .nav-link {
 p.home-modal-title {
     margin-bottom: 4rem;
     position: relative;
-    font-size: 28px;
+    font-size: var(--xl-font-size);
 }
 
 p.home-modal-title::before {
@@ -760,7 +721,7 @@ a.logo-link {
     zoom: 0.7;
     margin-right: 40px;
 } */
-
+/* 
 #sd-everyday-carousel .expand-icon {
     top: 1.5rem;
 }
@@ -787,7 +748,7 @@ a.logo-link {
     to {
         clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
     }
-}
+} */
 
 /* 
 #sunday-everyday .swiper-container.show {
@@ -1778,14 +1739,14 @@ button.btn.btn-link[aria-expanded='true'] {
 
 #video-bg .home-modal-content p {
     font-size: 16px;
-    line-height: 28px;
+    line-height: var(--xl-font-size);
     font-size: 300;
     letter-spacing: 0.01em;
 }
 
 #video-bg p.home-modal-title {
     font-weight: 300;
-    font-size: 28px;
+    font-size: var(--xl-font-size);
     line-height: 28px;
 }
 
@@ -2591,24 +2552,6 @@ textarea.form-control:focus {
     border-radius: 0;
 }
 
-.contact-us-title {
-    font-size: 28px;
-    font-weight: 500;
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.contact-us-title::after {
-    content: "";
-    background-color: rgba(133, 142, 136, 0.25);
-    width: 20px;
-    height: 1px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -1rem;
-}
-
 /* /Form controls */
 
 
@@ -2775,11 +2718,19 @@ textarea.form-control:focus {
 
 .fixture-box {
     border: 1px solid #ffffff;
-    height: 25vh;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
     transition: all 0.3s linear;
+}
+
+.fixture-box::before {
+    content: "";
+    float: left;
+    padding-top: 100%;
 }
 
 .fixture-box:hover {
@@ -2787,12 +2738,13 @@ textarea.form-control:focus {
 }
 
 .fixture-type {
-    width: 100%;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 20%;
     display: flex;
     align-items: center;
     border-top: 1px solid var(--background-color-grey);
-    margin: 0 10px;
-    height: 20%;
 }
 
 .fixture-type p {
@@ -2807,4 +2759,52 @@ textarea.form-control:focus {
 
 .fixture-box:hover .fixture-type p {
     color: #2d2d2d;
+}
+
+/* Fixture-modal */
+.fixture-modal-body {
+    height: 100%;
+    padding: 5rem;
+}
+
+.fixture-container {
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+.fixture-title {
+    position: relative;
+    font-size: var(--xl-font-size);
+    font-weight: var(--font-weight);
+    color: #2d2d2d;
+    text-transform: capitalize;
+}
+
+h3.fixture-title::before {
+    content: "";
+    position: absolute;
+    background-color: var(--font-primary-color);
+    height: 1px;
+    width: 20px;
+    left: 0;
+    bottom: -10px;
+}
+
+.fixture-list {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 15px;
+}
+
+.fitting {
+    border: 1px solid #e0e0e0;
+    width: 300px;
+    position: relative;
+}
+
+.fitting::before {
+    content: "";
+    float: left;
+    padding-top: 100%;
 }
