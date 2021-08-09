@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { modalData } from '../data/Content';
+import { modalData, building_construction_details as building_data } from '../data/Content';
 
 const GlobalContext = React.createContext();
 
@@ -14,6 +14,7 @@ const GlobalProvider = ({ children }) => {
   const [individualModalContent, setIndividualModalContent] = useState(
     modalData[0]
   );
+  const [singleFixtureModalContent, setSingleFixtureModalContent] = useState(building_data[0])
 
   const openAndCloseNavbar = () => {
     setIsOpen(!isOpen);
@@ -24,7 +25,7 @@ const GlobalProvider = ({ children }) => {
       showModal: true,
       case: 1
     });
-    setIndividualModalContent(modalData[index]);
+    window.fullpage_api.setAllowScrolling(false);
   };
 
   const handleFormModalClickOpen = () => {
@@ -32,10 +33,26 @@ const GlobalProvider = ({ children }) => {
       showModal: true,
       case: 2,
     });
+    window.fullpage_api.setAllowScrolling(false);
+  }
+
+  function handleFixtureModalClickOpen(index) {
+    setIsModalShow({
+      showModal: true,
+      case: 3,
+    });
+    setSingleFixtureModalContent(building_data[index])
+    window.fullpage_api.setAllowScrolling(false);
+
   }
 
   const handleModalClickClose = () => {
-   setIsModalShow(false)
+    setIsModalShow({
+      showModal: false,
+      case: 1,
+    });
+    window.fullpage_api.setAllowScrolling(true);
+
   };
 
   const onClickScrollDown = () => {
@@ -62,6 +79,8 @@ const GlobalProvider = ({ children }) => {
         handleModalClickClose,
         individualModalContent,
         setIsModalShow,
+        singleFixtureModalContent,
+        handleFixtureModalClickOpen,
         setError,
       }}
     >

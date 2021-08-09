@@ -18,9 +18,17 @@ import GeneralModal from './pages-components/GeneralModal';
 import Form from './pages-components/Form';
 import SingleUnit from './pages-components/SingleUnit';
 import Siteplan from './pages-components/Siteplan';
+import Fixture from './pages-components/Fixture';
 
 const Fullpage = () => {
-  const { individualModalContent, handleLogoModalClickOpen, isModalShow } = useGlobalContext();
+  const {
+    individualModalContent,
+    handleLogoModalClickOpen,
+    isModalShow,
+    singleFixtureModalContent,
+    handleFixtureModalClickOpen,
+  } = useGlobalContext();
+ 
   const [name, setName] = useState([
     { id: 1, className: '' },
     { id: 2, className: '' },
@@ -38,6 +46,8 @@ const Fullpage = () => {
       return <LogoModalContent {...individualModalContent} />
     } else if (isModalShow.case === 2) {
       return <Form />
+    } else {
+      return <Fixture {...singleFixtureModalContent} />
     }
   }
 
@@ -48,7 +58,7 @@ const Fullpage = () => {
       // sectionsColor={['orange', 'purple', 'green']}
       navigation={false}
       anchors={[
-        'home',
+        'wf-home',
         'intro',
         'every',
         'partners',
@@ -81,13 +91,27 @@ const Fullpage = () => {
         if (document.body.classList.contains(hrefLinks[1])) {
           setNavBarTitle({
             bgColorClass: 'opacity-deep',
-            title: 'Creative Partners',
+            title: 'Creative partners',
             topTitle: 'Sunday you know',
+          });
+        }
+        if (document.body.classList.contains(hrefLinks[2])) {
+          setNavBarTitle({
+            bgColorClass: '',
+            title: 'Welcome home',
+            topTitle: 'Sunday every day',
+          });
+        }
+        if (document.body.classList.contains(hrefLinks[3])) {
+          setNavBarTitle({
+            bgColorClass: '',
+            title: 'The siteplan',
+            topTitle: 'Welcome home',
           });
         }
         if (document.body.classList.contains(hrefLinks[4])) {
           setNavBarTitle({
-            bgColorClass: 'opacity-deep',
+            bgColorClass: '',
             title: 'Creative Partners',
             topTitle: 'Sunday you know',
           });
@@ -246,9 +270,9 @@ const Fullpage = () => {
                   secondHalfTitle='& finishes.'
                 />
                 <Row>
-                  {fixtures_type.map((fixture) => {
+                  {fixtures_type.map((fixture, index) => {
                     return (
-                      <Col key={fixture.id} md={3} sm={6} >
+                      <Col key={fixture.id} md={3} sm={6} onClick={() => handleFixtureModalClickOpen(index)} >
                         <div className="fixture-box">
                           <div className="fixture-type">
                             <p>{fixture.type}</p>

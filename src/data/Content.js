@@ -775,10 +775,172 @@ export const fixtures_type = [
   },
   {
     id: 3,
-    type: 'Fittings'
-  },
-  {
-    id: 4,
     type: 'Bathroom'
   }
+];
+
+export const building_construction_details = [
+  {
+    type: 'general',
+    items: [
+      {
+        item: 'CARPET TILE',
+        description: 'Shift Convert Carpet Tiles',
+        colour: 'Grey/Charcoal',
+        notes: '500x500mm Quarter turn pattern, First floors and stairs only',
+        img: '',
+      },
+      {
+        item: 'SUSPENDED CEILING',
+        description:
+          'Mineral fibre Ceiling Tiles in White Suspended T-bar grib',
+        colour: 'Matte Black',
+        notes: '1200x600x19mm Second Look',
+        img: '',
+      },
+    ],
+  },
+  {
+    type: 'kitchen',
+    items: [
+      {
+        item: 'SINK',
+        description: 'Single bowl Stainless Steel Sink',
+        colour: 'Stainless Steel',
+        notes: 'Stainless Steel Top mount Sink',
+        img: '',
+      },
+      {
+        item: 'KITCHEN MIXER',
+        description: 'Single bowl Stainless Steel Sink',
+        colour: 'Matt Black',
+        notes: '160 mm',
+        img: '',
+      },
+      {
+        item: 'HOT WATER UNIT',
+        description: 'Electric Hot Water Storage Unit',
+        colour: 'White',
+        notes: 'Compact Electric 50 ltr, 2.4 kW',
+        img: '',
+      },
+    ],
+  },
+  {
+    type: 'bathroom',
+    items: [
+      {
+        item: 'UNISEX ACCESSIBLE TOILET SUITE',
+        description: 'Life Assist Wall Faced C/C Suite',
+        colour: 'White / Grey seat',
+        notes: 'S-Trap, Grey Seat RB6044G',
+        img: '',
+      },
+      {
+        item: 'WALL BASIN',
+        description: 'Liano Nexus 750 RHS / LHS Wall Basin',
+        colour: 'White',
+        notes: 'Black waste & overflow ring (687149B)',
+        img: '',
+      },
+      {
+        item: 'UNISEX ACCESSIBLE TOILET SUITE',
+        description: 'Life Assist Wall Faced C/C Suite',
+        colour: 'White / Grey seat',
+        notes: 'S-Trap, Grey Seat RB6044G',
+        img: '',
+      },
+      {
+        item: 'BASIN TRAP',
+        description: 'Arcisan Bottle Trap 40mm',
+        colour: 'Matte Black',
+        notes: '',
+        img: '',
+      },
+      {
+        item: 'UNISEX ACCESSIBLE TOILET SUITE',
+        description: 'Life Assist Wall Faced C/C Suite',
+        colour: 'White / Grey seat',
+        notes: 'S-Trap, Grey Seat RB6044G',
+        img: '',
+      },
+      {
+        item: 'HAND TOWEL HOLDER',
+        description: 'Radii Hand Towel Holder',
+        colour: 'Stainless Steel',
+        notes: 'Round plate',
+        img: '',
+      },
+      {
+        item: 'BASIN TAP / MIXER',
+        description: 'Lugano Basin Mixer C/W 150mm Pin Lever',
+        colour: 'Matte Black',
+        notes: 'With extended 1500mm lever',
+        img: '',
+      },
+      {
+        item: 'SHOWER',
+        description: 'Vivid Rail Shower Set',
+        colour: 'White',
+        notes: '',
+        img: '',
+      },
+      {
+        item: 'SHOWER MIXER',
+        description: 'Vivid Slimline Shower / Wall Mixer',
+        colour: 'White',
+        notes: 'Round plate',
+        img: '',
+      },
+      {
+        item: 'SHOWER SHELF',
+        description: 'Radii Metal Shelf',
+        colour: 'Matte Black',
+        notes: '',
+        img: '',
+      },
+      {
+        item: 'FLOOR WASTE',
+        description: 'Stainless Steel Floor Grate',
+        colour: 'Stainless Steel',
+        notes: 'Square Stainless steel floor grate',
+        img: '',
+      },
+      {
+        item: 'TOILET ROLL HOLDER',
+        description: 'Radii Toilet Roll Holder',
+        colour: 'Matte Black',
+        notes: 'Round plate',
+        img: '',
+      },
+      {
+        item: 'GRAB RAILS AND BACK REST',
+        description: '32mm Diameter 90 deg Grab rails with Concealed Fixings',
+        colour: 'Matte Black',
+        notes: 'LH (Type 136), RH (Type 137) Refer drawings, complies with AS1428.1',
+        img: '',
+      },
+      {
+        item: 'AMBULANT GRAB RAILS',
+        description: '32mm Diameter 90 Deg Grab Rails with Concealed Fixings',
+        colour: 'Matte Black',
+        notes: 'Type 145 450x450mm Reversible refer drawings, complies with AS1428.1',
+        img: '',
+      },
+      {
+        item: 'MIRROR',
+        description: '750W Mirror',
+        colour: 'Silver',
+        notes: '750W x 1200H',
+        img: '',
+      },
+      {
+        item: 'ROVE HOOK',
+        description: 'Radii robe hook',
+        colour: 'Matte Black',
+        notes: 'Round plate',
+        img: '',
+      },
+    ],
+  },
 ];
