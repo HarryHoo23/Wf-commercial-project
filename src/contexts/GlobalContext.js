@@ -49,7 +49,7 @@ const GlobalProvider = ({ children }) => {
   const handleModalClickClose = () => {
     setIsModalShow({
       showModal: false,
-      case: 1,
+      ...isModalShow.case,
     });
     window.fullpage_api.setAllowScrolling(true);
 

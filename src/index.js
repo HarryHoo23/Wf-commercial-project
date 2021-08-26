@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 import './index.css';
+import './responsive.css';
 import { GlobalProvider } from './contexts/GlobalContext';
 import App from './components/App';
 

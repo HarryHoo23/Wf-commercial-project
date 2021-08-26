@@ -834,14 +834,14 @@ export const building_construction_details = [
         description: 'Life Assist Wall Faced C/C Suite',
         colour: 'White / Grey seat',
         notes: 'S-Trap, Grey Seat RB6044G',
-        img: '',
+        img: 'https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg',
       },
       {
         item: 'WALL BASIN',
         description: 'Liano Nexus 750 RHS / LHS Wall Basin',
         colour: 'White',
         notes: 'Black waste & overflow ring (687149B)',
-        img: '',
+        img: 'https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Shower%20Rail_Typical%20Bathroom%20Master%20Ensuite.jpg',
       },
       {
         item: 'UNISEX ACCESSIBLE TOILET SUITE',
@@ -883,21 +883,21 @@ export const building_construction_details = [
         description: 'Vivid Rail Shower Set',
         colour: 'White',
         notes: '',
-        img: '',
+        img: 'https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg',
       },
       {
         item: 'SHOWER MIXER',
         description: 'Vivid Slimline Shower / Wall Mixer',
         colour: 'White',
         notes: 'Round plate',
-        img: '',
+        img: 'https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg',
       },
       {
         item: 'SHOWER SHELF',
         description: 'Radii Metal Shelf',
         colour: 'Matte Black',
         notes: '',
-        img: '',
+        img: 'https://sundayhawksburn.com.au/client/assets/img/fixtures/bathroom/Toilet%20rimless_Powder%20Room,%20Typical%20Bathroom%20and%20Master%20Ensuite.jpg',
       },
       {
         item: 'FLOOR WASTE',
@@ -917,14 +917,16 @@ export const building_construction_details = [
         item: 'GRAB RAILS AND BACK REST',
         description: '32mm Diameter 90 deg Grab rails with Concealed Fixings',
         colour: 'Matte Black',
-        notes: 'LH (Type 136), RH (Type 137) Refer drawings, complies with AS1428.1',
+        notes:
+          'LH (Type 136), RH (Type 137) Refer drawings, complies with AS1428.1',
         img: '',
       },
       {
         item: 'AMBULANT GRAB RAILS',
         description: '32mm Diameter 90 Deg Grab Rails with Concealed Fixings',
         colour: 'Matte Black',
-        notes: 'Type 145 450x450mm Reversible refer drawings, complies with AS1428.1',
+        notes:
+          'Type 145 450x450mm Reversible refer drawings, complies with AS1428.1',
         img: '',
       },
       {
@@ -942,5 +944,30 @@ export const building_construction_details = [
         img: '',
       },
     ],
+  },
+];
+
+export const sale_contacts = [
+  {
+    id: 1,
+    name: 'Marty Fox',
+    title: 'Founder & Director',
+    sale_intro:
+      'Marty started WHITEFOX in February 2017, but it was nothing like an overnight success. Throughout Marty’s 11 year real estate journey, the appeal of an agency that was bolder in not just the way it looked, but how it operated both behind the scenes, and in the art of the deal, drove him then and still does today.',
+    phone: '0438 808 859',
+    email: 'marty@whitefoxrealestate.com.au',
+    insta_link: 'https://www.instagram.com/martyfox01/?hl=en',
+    img: 'https://sundayhawksburn.com.au/client/assets/img/marty.jpg',
+  },
+  {
+    id: 2,
+    name: 'Lana Smauels',
+    title: 'Founder & Director',
+    sale_intro:
+      'Marty started WHITEFOX in February 2017, but it was nothing like an overnight success. Throughout Marty’s 11 year real estate journey, the appeal of an agency that was bolder in not just the way it looked, but how it operated both behind the scenes, and in the art of the deal, drove him then and still does today.',
+    phone: '0438 808 859',
+    email: 'marty@whitefoxrealestate.com.au',
+    insta_link: 'https://www.instagram.com/martyfox01/?hl=en',
+    img: 'https://sundayhawksburn.com.au/client/assets/img/lana.jpg',
   },
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-// import InfoLogout from './InfoLogout';
+import InfoLogout from './InfoLogout';
 import { Col } from 'react-bootstrap';
 import { links } from '../../data/Menu';
 import { useAuth } from '../../contexts/AuthContext';
@@ -22,6 +22,7 @@ export default function Header() {
             <div className='menu-box'>
               <Col md='7' id='mobile-nav-content'>
                 <p className='menu-title'>Navigation</p>
+                <InfoLogout />
                 <ul className='nav navbar-nav'>
                   {links.map((link) => {
                     const { id, href, text } = link;

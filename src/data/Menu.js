@@ -42,9 +42,46 @@ export const links = [
 ];
 
 export const hrefLinks = [
-  'fp-viewing-intro',
-  'fp-viewing-every',
-  'fp-viewing-partners',
-  'fp-viewing-welcomeHome',
-  'fp-viewing-fixtures'
+  {
+    link: 'fp-viewing-intro',
+    bgColorClass: '',
+    title: 'Sunday you know',
+    topTitle: 'Home',
+  },
+  {
+    link: 'fp-viewing-every',
+    bgColorClass: 'opacity-deep',
+    title: 'Creative partners',
+    topTitle: 'Sunday you know',
+  },
+  {
+    link: 'fp-viewing-partners',
+    bgColorClass: '',
+    title: 'Welcome home',
+    topTitle: 'Sunday every day',
+  },
+  {
+    link: 'fp-viewing-welcomeHome',
+    bgColorClass: '',
+    title: 'The siteplan',
+    topTitle: 'Welcome home',
+  },
+  {
+    link: 'fp-viewing-fixtures',
+    bgColorClass: '',
+    title: 'Creative Partners',
+    topTitle: 'Sunday you know',
+  },
+  {
+    link: 'fp-viewing-doorstep',
+    bgColorClass: 'opacity-deep',
+    title: 'Sunday you know',
+    topTitle: 'Fixture & Fittings',
+  },
+  {
+    link: 'fp-viewing-contact-us',
+    bgColorClass: 'opacity-deep',
+    title: 'Doorstep',
+    topTitle: 'Disclaimer',
+  },
 ];

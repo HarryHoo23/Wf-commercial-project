@@ -2,7 +2,7 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import SectionWrapper from './SectionWrapper';
 import { hrefLinks } from '../data/Menu';
-import { tabContent, fixtures_type } from '../data/Content';
+import { tabContent, fixtures_type, sale_contacts } from '../data/Content';
 import { useState } from 'react';
 import { Row, Col, Tab, Nav } from 'react-bootstrap';
 import { useGlobalContext } from '../contexts/GlobalContext';
@@ -18,7 +18,9 @@ import GeneralModal from './pages-components/GeneralModal';
 import Form from './pages-components/Form';
 import SingleUnit from './pages-components/SingleUnit';
 import Siteplan from './pages-components/Siteplan';
-import Fixture from './pages-components/Fixture';
+import FixtureList from './pages-components/FixtureList';
+import DoorStepAccordion from './pages-components/DoorStepAccordion';
+import Sale from './pages-components/Sale';
 
 const Fullpage = () => {
   const {
@@ -47,7 +49,7 @@ const Fullpage = () => {
     } else if (isModalShow.case === 2) {
       return <Form />
     } else {
-      return <Fixture {...singleFixtureModalContent} />
+      return <FixtureList {...singleFixtureModalContent} />
     }
   }
 
@@ -66,58 +68,32 @@ const Fullpage = () => {
         'siteplan',
         'units',
         'fixtures',
-        'video',
-        'map',
+        'doorstep',
+        // 'map',
         'contact-us',
         'disclaimer',
-        'backpage',
       ]}
       autoScrolling={true}
       scrollBar={true}
+      normalScrollElements={'.sale-intro'}
       // normalScrollElements: '.vs-img, .sale-intro, #map',
       touchSensitivity={15}
       fitToSection={true}
-      afterLoad={(origin, destination, direction) => {
-        if (document.body.classList.contains(hrefLinks[0])) {
-          let newArr = [...name];
-          newArr[0].className = 'show';
-          setName(newArr);
-          setNavBarTitle({
-            bgColorClass: '',
-            title: 'Sunday you know',
-            topTitle: 'Home',
-          });
-        }
-        if (document.body.classList.contains(hrefLinks[1])) {
-          setNavBarTitle({
-            bgColorClass: 'opacity-deep',
-            title: 'Creative partners',
-            topTitle: 'Sunday you know',
-          });
-        }
-        if (document.body.classList.contains(hrefLinks[2])) {
-          setNavBarTitle({
-            bgColorClass: '',
-            title: 'Welcome home',
-            topTitle: 'Sunday every day',
-          });
-        }
-        if (document.body.classList.contains(hrefLinks[3])) {
-          setNavBarTitle({
-            bgColorClass: '',
-            title: 'The siteplan',
-            topTitle: 'Welcome home',
-          });
-        }
-        if (document.body.classList.contains(hrefLinks[4])) {
-          setNavBarTitle({
-            bgColorClass: '',
-            title: 'Creative Partners',
-            topTitle: 'Sunday you know',
-          });
+      afterLoad={() => {
+        for (let i = 0; i < hrefLinks.length; i++) {
+          if (document.body.classList.contains(hrefLinks[i].link)) {
+            let newArr = [...name];
+            newArr[0].className = 'show';
+            setName(newArr);
+            setNavBarTitle({
+              bgColorClass: hrefLinks[i].bgColorClass,
+              title: hrefLinks[i].title,
+              topTitle: hrefLinks[i].topTitle,
+            });
+          }
         }
       }}
-      render={({ state }) => {
+      render={() => {
         return (
           <ReactFullpage.Wrapper>
             <Navbar
@@ -272,19 +248,111 @@ const Fullpage = () => {
                 <Row>
                   {fixtures_type.map((fixture, index) => {
                     return (
-                      <Col key={fixture.id} md={3} sm={6} onClick={() => handleFixtureModalClickOpen(index)} >
-                        <div className="fixture-box">
-                          <div className="fixture-type">
+                      <Col
+                        key={fixture.id}
+                        md={3}
+                        sm={6}
+                        onClick={() => handleFixtureModalClickOpen(index)}
+                      >
+                        <div className='fixture-box'>
+                          <div className='fixture-type'>
                             <p>{fixture.type}</p>
                           </div>
                         </div>
                       </Col>
-                    )
+                    );
                   })}
                 </Row>
               </div>
             </SectionWrapper>
 
+            <SectionWrapper class={'section'} idName={'doorstep'}>
+              <div className='bg-wrapper'>
+                <Row>
+                  <Col
+                    md={8}
+                    className='dp-container-left'
+                    id='slow-start'
+                  ></Col>
+                  <Col md={4}>
+                    <DoorStepAccordion />
+                  </Col>
+                </Row>
+              </div>
+            </SectionWrapper>
+
+            <SectionWrapper class={'section'} idName={'doorstep'}>
+              <div className='bg-wrapper'>
+                <div className='contact-container'>
+                  <Title
+                    colorClassName=''
+                    firstHalfTitle='Questions?'
+                    secondHalfTitle='answers.'
+                  />
+                  <Row className='contacts'>
+                    {sale_contacts.map((info) => {
+                      return (
+                        <Col
+                          md={6}
+                          key={info.id}
+                          className='sale-member-container'
+                        >
+                          <article>
+                            <Sale sale={info} />
+                          </article>
+                        </Col>
+                      );
+                    })}
+                  </Row>
+                </div>
+              </div>
+            </SectionWrapper>
+
+            <SectionWrapper class={'section'} idName={'disclaimer-page'}>
+              <div className='bg-wrapper'>
+                <Row className='claimer-row'>
+                  <Col md={8}>
+                    <Title
+                      colorClassName='white-title'
+                      firstHalfTitle='Disclaimer.'
+                      secondHalfTitle=''
+                    />
+                    <div className='claimer-content'>
+                      <p className='claimer-text-block'>
+                        All details provided in this brochure are indicative
+                        only, for information purposes only and subject to
+                        change without notice. No warranty or promise is made by
+                        the sales brochure vendors or its representatives, its
+                        related entities, consultants or their agents, either
+                        expressly or impliedly. Purchasers and interested
+                        parties must rely on their own enquiries and obtain
+                        their own independent advice in relation to the
+                        information and representation contained in this
+                        brochure and its accuracy. Photographs and artist
+                        impressions are for presentation purposes only and are
+                        indicative only. They should not be relied upon as an
+                        accurate representation of the final product.
+                        Specification may change at any time. All interested
+                        parties must refer to the contract of sale as to what is
+                        included in the sale of the property.
+                      </p>
+                    </div>
+                    <p class='copyright'>Copyright © 2021 </p>
+                  </Col>
+                  <Col md={4}>
+                    <div class='logobox'>
+                      <p>
+                        Created by <br />
+                        <img
+                          class='whitefox-logo'
+                          src='https://sundayhawksburn.com.au/wp-content/uploads/2021/03/logo-5.svg'
+                        />
+                      </p>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </SectionWrapper>
           </ReactFullpage.Wrapper>
         );
       }}
